@@ -15,9 +15,8 @@ def split(array, divisor):
     if len(array) < 1:
         raise ValueError("Parameter array cannot be empty.")
 
-    output = []
     array_length = int(math.ceil(float(len(array)) / float(divisor)))
-    return _recurse_split(array, array_length, output)
+    return _recurse_split(array, array_length, [])
 
 def _recurse_split(array, array_length, output):
     """Appends the next sub-array to the output and then calls itself, passing
